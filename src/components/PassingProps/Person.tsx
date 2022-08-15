@@ -1,10 +1,6 @@
 import React from 'react'
-type PersonProps = {
-    personName: {
-        first: string,
-        last: string
-    }
-}
+import { PersonProps } from './Person.types'
+
 export default function Person({ personName }: PersonProps) {
     return (
         <div>
