@@ -9,6 +9,8 @@ import { UserContextProvider } from './components/Hooks/context/UserContext'
 import List from './components/generics/List'
 import RandomNumber from './components/restriction/RandomNumberProps'
 import Toast from './components/templateLiterals/Toast'
+import CustomButton from './components/html/Button'
+import Test from './components/polymorphic/Test'
 export default function App() {
   const nameList = [
     {
@@ -30,7 +32,13 @@ export default function App() {
   ]
   return (
     <div className='App'>
-      <Toast position='center'/>
+      <Test as="h1" size='lg'>Heading</Test>
+      <Test as="p" size='md'>Paragraph</Test>
+      <Test as="label"  size='sm'htmlFor="someId" color='secondary'>Label</Test>
+      {/* <CustomButton variant='primary' onClick={() => console.log('Button is clicked')}>
+        Primary Button
+      </CustomButton> */}
+      {/* <Toast position='center'/> */}
       {/* <RandomNumber value={10} isPositive/> Restricted use of props */}
       {/* <List items={['Batman', 'Superman', 'Mrs Marvel']} onClick={(item) => console.log('item ::', item)} /> */}
       {/* <List items={[1, 2, 3]} onClick={(item) => console.log('item ::', item)} /> */}
